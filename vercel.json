@@ -2,5 +2,10 @@
     "framework": null,
     "github": { "silent": true },
     "routes": [{ "src": "/.*", "dest": "/api/vercel.ts" }],
-    "ignoreBuildStep": true
+    "builds": [
+    {
+        "src": "api/**/*.ts",
+        "use": "@vercel/node"
+    }
+]
 }
